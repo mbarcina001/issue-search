@@ -1,0 +1,37 @@
+#search-bar{
+    margin-top: 10em;
+    max-width: 60em;
+    margin-left: auto;
+    margin-right: auto;
+    transition: margin-top 0.5s;
+
+    &.no-margin-top{
+        margin-top:0 !important;
+    }
+
+    .input-group{
+        .input-group-append{
+            cursor: pointer;
+        }
+    }
+}
+
+#loading ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+    stroke:white;
+}
+mat-spinner{
+    margin:auto;
+}
+
+.mat-progress-spinner circle, .mat-spinner circle {
+    stroke: white;
+}
+
+.form-control{
+    &:focus {
+        border-color:rgba(100,100,100,1)!important;
+        -webkit-box-shadow: none!important;
+        -moz-box-shadow: none!important;
+        box-shadow: none!important;
+    }
+}

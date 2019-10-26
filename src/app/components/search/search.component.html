@@ -1,0 +1,35 @@
+<div id="search-bar" [class.no-margin-top]="(issueList$ | async)?.length>0">
+    <form #myForm="ngForm" autocomplete="off" novalidate>
+        <div class="input-group mt-4 mb-1">
+            <div class="input-group-prepend">
+                <span class="input-group-text">https://github.com/</span>
+            </div>
+            <input type="text" class="form-control" 
+                name="repo" id="repo"
+                aria-label="Enter Github repository" 
+                aria-describedby="repoHelp"
+                placeholder="Enter Github repository"
+                #repo="ngModel" 
+                ngModel
+                required 
+                pattern="[\-a-zA-z]*\/[\-a-zA-z]*"
+            />
+            <div class="input-group-append" (click)="search(myForm)">
+                <span class="input-group-text">
+                <i class="material-icons">search</i>
+                </span>
+            </div>
+        </div>
+        <p id="repoHelp" class="font-weight-light mb-2" [hidden]="(issueList$ | async)?.length>0">e.g: {{eg}}</p>
+        <app-field-error [control]="repo"></app-field-error>
+    </form>
+</div>
+
+<div id="loading" class="text-center" [hidden]="!(isLoading$ | async)">
+    <p>Loading...</p>
+    <mat-spinner [color]="white"></mat-spinner>
+</div>
+
+<div *ngIf="issueList$ | async" class="mt-4 mb-4 list-group list-group-flush">
+    <app-issue *ngFor="let issue of issueList$ | async" [issue]="issue"></app-issue>
+</div>

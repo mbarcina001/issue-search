@@ -1,0 +1,16 @@
+.issue{
+    color: black;
+    max-width: 60em;
+    margin: auto;
+
+    .go-to-repo-link{
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        
+        i{
+            font-size: 40px;
+            color: black;
+        }
+    }
+}
