@@ -8,7 +8,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build": "ng build --prod --base-href \"https://mbarcina001.github.io/issue-search/\"",
-    "ngh": "ngh --no-silent --message=\"Serving last commit changes\""
+    "ngh": "angular-cli-ghpages --dir=dist/issue-search --no-silent --message=\"Serving last commit changes\""
   },
   "private": true,
   "dependencies": {
@@ -27,6 +27,7 @@
     "@ngrx/router-store": "^8.4.0",
     "@ngrx/store": "^8.4.0",
     "@ngrx/store-devtools": "^8.4.0",
+    "angular-cli-ghpages": "^0.6.0",
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
     "moment": "^2.24.0",
