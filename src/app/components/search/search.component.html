@@ -27,7 +27,7 @@
 
 <div id="loading" class="text-center" [hidden]="!(isLoading$ | async)">
     <p>Loading...</p>
-    <mat-spinner [color]="white"></mat-spinner>
+    <mat-spinner></mat-spinner>
 </div>
 
 <div *ngIf="issueList$ | async" class="mt-4 mb-4 list-group list-group-flush">

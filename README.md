@@ -8,7 +8,7 @@ Built with [@angular/cli](https://github.com/angular/angular-cli)
 
 ```bash
 # clone the repo
-git clone https://github.com/ngrx/example-app.git
+git clone https://github.com/mbarcina001/issue-search.git
 
 
 # change directory to repo

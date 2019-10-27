@@ -11,7 +11,7 @@ import * as moment from 'moment';
 export class IssueComponent implements OnInit {
 
   private _issue = new BehaviorSubject<Issue>(null);
-  private daysPassed: string;
+  public daysPassed: string;
 
     @Input()
     set issue(value) {
