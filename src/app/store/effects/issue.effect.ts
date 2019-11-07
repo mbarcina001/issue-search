@@ -26,8 +26,11 @@ export class IssueEffects {
                 )
               );
             }
-            console.log(issueList);
-            return getIssueListSuccess({ issueList: issueList })   
+            if(issueList.length>0){
+              return getIssueListSuccess({ issueList: issueList })
+            }else{
+              return getIssueListFail({ error: "Search did not return any result"})
+            }
           }),
           catchError((error) => {
             return of(getIssueListFail({ error: error.message})) 

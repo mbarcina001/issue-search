@@ -20,7 +20,7 @@
                 </span>
             </div>
         </div>
-        <p id="repoHelp" class="font-weight-light mb-2" [hidden]="(issueList$ | async)?.length>0">e.g: {{eg}}</p>
+        <p id="repoHelp" class="font-weight-light mb-2" [hidden]="(issueList$ | async)?.length>0 && !(errorMessage$ | async)">e.g: {{eg}}</p>
         <app-field-error [control]="repo"></app-field-error>
     </form>
 </div>
@@ -30,6 +30,6 @@
     <mat-spinner></mat-spinner>
 </div>
 
-<div *ngIf="issueList$ | async" class="mt-4 mb-4 list-group list-group-flush">
+<div *ngIf="issueList$ | async" class="mt-4 mb-4 list-group list-group-flush" [hidden]="(isLoading$ | async) || (errorMessage$ | async)">
     <app-issue *ngFor="let issue of issueList$ | async" [issue]="issue"></app-issue>
 </div>
