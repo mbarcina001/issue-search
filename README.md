@@ -1,4 +1,8 @@
+# Github Issue Search
+
 Built with [@angular/cli](https://github.com/angular/angular-cli)
+
+Browser for issues in Github repositories.
 
 ### Included
  - [ngrx/store](https://github.com/ngrx/store) - RxJS powered state management for Angular apps, inspired by Redux
@@ -25,3 +29,8 @@ ng serve
 ```
 
 Navigate to [http://localhost:4200/](http://localhost:4200/) in your browser
+
+
+### Github pages
+
+This project is uploaded to Github Pages: https://mbarcina001.github.io/issue-search/

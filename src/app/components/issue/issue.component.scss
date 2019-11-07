@@ -3,10 +3,15 @@
     max-width: 60em;
     margin: auto;
 
+    .title{
+        font-weight: 900;
+    }
+
     .go-to-repo-link{
         position: absolute;
         top: 1em;
         right: 1em;
+        cursor: pointer;
         
         i{
             font-size: 40px;
