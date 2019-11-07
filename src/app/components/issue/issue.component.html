@@ -1,6 +1,5 @@
 <div class="issue list-group-item">
     <p class="mb-0 title">{{(issue)?.title}}</p>
-    <!--<p class="mb-0">{{moment().startOf((issue)?.createdAt).fromNow();}} by {{(issue)?.publisher}}</p>-->
     <p class="mb-0">{{this.daysPassed}} by {{(issue)?.publisher}}</p>
     <div class="go-to-repo-link">
         <a href="{{(issue)?.url}}" target="_blank">
